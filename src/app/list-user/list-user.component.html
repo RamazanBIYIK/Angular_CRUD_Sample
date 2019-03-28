@@ -1,0 +1,37 @@
+<div class="col-md-6 user-container">
+<h2 style="margin:auto">Kullanıcı Detayı</h2>
+<button class=" btn btn-danger" style="width:100px" (click)="addUser()">Ekle</button>
+<table class="table table-striped">
+  
+  <thead>
+    <tr>
+      <th class="hidden">id</th>
+      <th class="hidden">Kullanıcı Adı</th>
+      <th class="hidden">İsim</th>
+      <th class="hidden">Soyisim</th>
+      <th class="hidden">E-Posta</th>
+     
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td class="hidden">{{user.id}}</td>
+      <td>{{user.userName}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.surname}}</td>
+      <td>{{user.email}}</td>
+ 
+      <td><button class="btn btn-danger" (click)="deleteUser(user)">
+        Sil
+      </button>  
+    
+      <button class="btn btn-success" (click)="updateUser(user)">
+        Düzenle
+      </button>  
+    </td>
+    </tr>
+  </tbody>
+
+</table>
+</div>

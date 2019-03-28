@@ -1,0 +1,39 @@
+<div class="col-md-6 user-container">
+  <h2 class="text-center">Düzenle</h2>
+
+<form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+  
+  <div class="hidden">
+    <input type="text" formControlName="id" placeholder="id" name="id" class="form-control" id="id">
+  </div>
+
+<div class="form-group">
+  <label for="username">Kullanıcı Adı:</label>
+  <input type="text" formControlName="username" placeholder="username" name="username" class="form-control" id="username" >
+</div> 
+
+<div class="form-group">
+  <label for="firstname">Adı :</label>
+  <input type="text" formControlName="firstname" placeholder="firstname" name="firstname" class="form-control" id="firstname" >
+</div> 
+
+<div class="form-group">
+  <label for="lastname">Soyadı :</label>
+  <input type="text" formControlName="lastname" placeholder="lastname" name="lastname" class="form-control" id="lastname" >
+</div> 
+
+<div class="form-group">
+  <label for="age">Yaş :</label>
+  <input type="text" formControlName="age" placeholder="age" name="age" class="form-control" id="age" >
+</div> 
+
+<div class="form-group">
+  <label for="salary">Maaş :</label>
+  <input type="text" formControlName="salary" placeholder="salary" name="salary" class="form-control" id="salary" >
+</div> 
+
+<button class="btn btn-success">Güncelle</button>
+
+</form>
+
+</div>
